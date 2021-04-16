@@ -1,0 +1,313 @@
+@keyframes content{ 
+        from {     
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    
+}
+@keyframes invisible {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+        animation: content 3s linear;
+    }
+
+.spinner-box{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    animation: invisible 2s 1s forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.main-col{
+    width: 92%;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+}
+.star{
+    margin-top: 230px;
+   
+    right: 50%;
+  
+}
+ .triangle{
+
+    box-sizing: border-box;
+    position: absolute;
+    
+    width: 100px;
+    height: 100px;
+    border: 55px solid transparent;
+    border-top: 115px solid violet;
+}
+.triangle-1{
+    box-sizing: border-box;
+    position: absolute;
+    
+    width: 100px;
+    height: 100px;
+    border: 55px solid transparent;
+    border-top: 115px solid violet;
+    transform: matrix(1, 0, 0, 1, -140, -140) rotate(90deg);
+}
+.triangle-3{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 55px solid transparent;
+    border-top: 115px solid violet;
+    transform: matrix(1, 0, 0, 1, 0, -280) rotate(180deg);
+}
+.triangle-2{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 55px solid transparent;
+    border-top: 115px solid violet;
+    transform: matrix(1, 0, 0, 1, 140, -140) rotate(-90deg);
+}
+.block{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 55px solid transparent;
+    transform: matrix(1, 0, 0, 1, 0, -110);
+    background-color: violet;
+}
+.traffic-light{
+display: block;  
+  padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.traffic-light__lights{
+    position: relative;
+    width: 100px;
+    border-radius: 15px;
+    height: 300px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.5px solid black;
+    box-shadow: 0px 0px 14px 5px inset, inset -3px -3px 3px -3px ;
+}
+.traffic-light__lights::after{
+    content: '';
+    width: 60px;
+    height: 15px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    background-color: grey;
+   position: absolute;
+    bottom: -10px;
+    border: 0.5px solid black;
+    z-index: -1;
+}
+.traffic-light__lights::before{
+    content: '';
+    width: 60px;
+    height: 15px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    background-color: grey;
+    position: absolute;
+    top: -10px;
+    transform: rotate(180deg);
+    border: 0.5px solid black;
+    z-index: -1;
+}
+@keyframes Red-light {
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: red;
+    }
+    25% {
+        background-color: gray;
+    }
+    30% {
+        background-color: red;
+    }
+    35% {
+        background-color: gray;
+    }
+    40% {
+        background-color: red;
+    }
+    45% {
+        background-color: gray;
+    }
+    50% {
+        background-color: gray;
+    }
+    60% {
+        background-color: gray;
+    }
+    80% {
+        background-color: gray;
+    }
+    100% {
+        background-color: gray;
+    } 
+}
+@keyframes yellow-light {
+    0% {
+        background-color: gray;
+    }
+    20% {
+        background-color: gray;
+    }
+    40% {
+        background-color: gray;
+    }
+    50% {
+        background-color: yellow;
+    }
+    55% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: gray;
+    }
+    80% {
+        background-color: gray;
+    }
+    100% {
+        background-color: gray;
+    }
+}
+@keyframes green-light {
+    0% {
+        background-color: gray;
+    }
+    20% {
+        background-color: gray;
+    }
+    40% {
+        background-color: gray;
+    }
+    50% {
+        background-color: gray;
+    }
+    55% {
+        background-color: gray;
+    }
+    60% {
+        background-color: green;
+    }
+    80% {
+        background-color: green;
+    }
+    85% {
+        background-color: gray;
+    }
+    90% {
+        background-color: green;
+    }
+    95% {
+        background-color: gray;
+    }
+    100% {
+        background-color: green;
+    }
+    
+}
+.cap{
+    position: absolute;
+    width: 71px;
+    height: 63px;
+    border-radius: 40%;
+    border: 0px solid transparent;
+    border-top: black solid;
+    box-shadow: -1px 24px 28px -23px inset, inset 0px 1px 1px -5px;
+}
+.cap1{
+    position: absolute;
+    width: 71px;
+    bottom: 18px;
+    height: 63px;
+    border-radius: 40%;
+    border: 0px solid transparent;
+    border-top: black solid;
+    box-shadow: -1px 24px 28px -23px inset, inset 0px 1px 1px -5px;
+}
+.cap2{
+    position: absolute;
+    top: 18px;
+    width: 71px;
+    height: 63px;
+    border-radius: 40%;
+    border: 0px solid transparent;
+    border-top: black solid;
+    box-shadow: -1px 24px 28px -23px inset, inset 0px 1px 1px -5px;
+}
+
+
+.lights__red{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    animation-name: Red-light;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 0px 14px 1px inset, inset -1px -1px 1px -1px ;
+}
+.lights__yellow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    background-color: yellow;
+    animation-name: yellow-light;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 0px 14px 1px inset, inset -1px -1px 1px -1px ;
+}
+.lights__green{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    background-color: green;
+    animation-name: green-light;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 0px 14px 1px inset, inset -1px -1px 1px -1px ; 
+}
+.pillar{
+    position: absolute;
+    width: 30px;
+    height: 300px;
+    bottom: -300px;
+    background: black;
+    z-index: -3;
+}
+.ground{
+    position: absolute;
+    bottom: -300px;
+    background: black;
+    width: 300px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+}
